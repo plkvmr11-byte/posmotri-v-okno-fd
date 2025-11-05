@@ -75,6 +75,9 @@ ol {
 
 .result__video {
   width: 100%;
+  height:100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .content__details {
@@ -111,6 +114,7 @@ h2 {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
 }
+
 .visually-hidden {
   position: absolute;
   overflow: hidden;
@@ -137,9 +141,11 @@ h2 {
   outline: none;
   width: 225px;
 }
+
 .search-form__textfield:has(:focus-visible) {
   border: 1px solid rgba(255, 255, 255, 1);
 }
+
 .search-form__fieldset-title {
   font-size: 18px;
   margin-bottom: 5px;
@@ -155,6 +161,7 @@ h2 {
   padding: 0;
   gap: 5px;
 }
+
 .search-form__label:has(.search-form__checkbox:focus-visible) {
   outline: 1px solid white; 
   outline-offset: 1px;
@@ -163,23 +170,12 @@ h2 {
 .search-form__checkbox {
   outline: none;
 }
+
 .search-form__checkbox-list {
   display: flex;
   flex-wrap: nowrap; 
   gap: 15px; 
   align-items: center; 
-}
-
-.search-form__checkbox.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
 }
 
 .search-form__pseudo-checkbox {
@@ -192,6 +188,7 @@ h2 {
   padding: 1px;
   background-color: transparent;
 }
+
 .search-form__label:hover {
   text-decoration: underline;
   text-decoration-color: white;
@@ -205,6 +202,7 @@ h2 {
   background-color: white;
   opacity: 0;
 }
+
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   opacity: 1;
 }
@@ -213,6 +211,7 @@ h2 {
   outline: 1px solid white; 
   outline-offset: 1px;
 }
+
 .button {
   font-family: 'Fira Sans Condensed', sans-serif;
   color: rgba(255, 255, 255, 1);
@@ -223,14 +222,17 @@ h2 {
   outline: none;
   cursor: pointer;
 }
+
 .button:hover {
   text-decoration: underline;
   text-decoration-color: white;
 }
+
 .button:active {
   border: 1px solid rgba(255, 255, 255, 1);
   background-color: rgba(84, 80, 80, 1);
 }
+
 .button:focus-visible {
   outline: 1px solid white;
   outline-offset: 1px;
@@ -241,6 +243,7 @@ h2 {
   height: 34px;
   margin-top: 20px;
 }
+
 h1 {
   font-size: 75px;
   font-family: Oswald , sans-serif;
@@ -254,6 +257,7 @@ h1 {
 .content__accent {
   opacity: 0.2;
 }
+
 .content__list-container {
   width: 399px;
   height: 298px;     
@@ -273,6 +277,11 @@ h1 {
   padding-left: 3px;
   padding-right: 3px;
 }
+
+.content__list-item:last-child {
+  margin-bottom: 0;
+}
+
 .content__video-card-description-container {
   width: 196px; 
 }
@@ -296,33 +305,47 @@ h1 {
   font-weight: 400;
   letter-spacing: 0.5px;
 }
+
 .content__video-card-thumbnail {
- width: 194px;
- height: 103px;
+  width: 194px;
+  height: 103px;
+  object-fit: cover;
+  object-position: center;
 }
+
 .content__card-link {
   text-decoration: none;
   display: block;
   width: 390px;
   outline: none;
 }
+
 .content__card-link:active {
   background-color: rgba(84, 80, 80, 1);
 }
+
 .content__card-link:hover{
   text-decoration: underline;
   text-decoration-color: white;
 }
+
 .content__card-link:focus-visible {
   outline: 1px solid white;
   outline-offset: 1px;    
 }
+
 .preloader {
   position: absolute;
 }
+
 .result__video-container, .content__list-container {
   position: relative;
 }
+
+.content__card-link_current{
+  background-color: rgba(84, 80, 80, 1);
+}
+
 .more-button {
   width: 390px;
   height: 34px;
